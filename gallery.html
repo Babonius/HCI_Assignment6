@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <title>infinite</title>
+</head>
+<body>
+    <h1>Gallery</h1>
+    <form>
+        <input type="checkbox" id="nature">
+        <label>Nature</label>
+        <input type="checkbox" id="animal">
+        <label>Animal</label>
+        <input type="checkbox" id="travel">
+        <label>Travel</label>
+        <br>
+        <button class="btn1" onclick="filter(event)">Submit</button>
+    </form>
+
+    <div class="division" id="natureDiv"><img src="nature.jpg" width="250px"></div>
+    <div class="division" id="animalDiv"><img src="animal.jpg" width="300px"></div>
+    <div class="division" id="travelDiv"><img src="travel.jpeg" width="200px"></div>
+<script>
+
+    function filter(event){
+        event.preventDefault();
+
+        var nat = document.getElementById("nature");
+        var anim = document.getElementById("animal");
+        var trav = document.getElementById("travel");
+
+        var natureDiv = document.getElementById("natureDiv");
+        var animalDiv = document.getElementById("animalDiv");
+        var travelDiv = document.getElementById("travelDiv");
+
+        if (nat.checked){
+            natureDiv.style.display = 'none';
+        }else{
+            natureDiv.style.display = 'block';
+        }
+        if (anim.checked){
+            animalDiv.style.display = 'none';
+        }else{
+            animalDiv.style.display = 'block';
+        }
+        if (trav.checked){
+            travelDiv.style.display = 'none';
+        }else{
+            travelDiv.style.display = 'block';
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.square{
+    border: 1px solid;
+    width: 150px;
+    float: left ;
+    margin-right: 10px;
+}
+
+.square a{
+    text-decoration: none;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css" /> 
+    <title>html</title>
+</head>
+
+<body>
+    <div class="bjir">  
+        <h2>Contact Us!</h2>
+        <div>
+            <form class="harry">
+                <label>Name:</label>
+                <br>
+                <input type="text" id="name" name="name">
+                <br>
+                <label>Email:</label>
+                <br>
+                <input type="email" id="mail" name="mail">
+                <br>
+                <label>Comments:</label>
+                <br>
+                <textarea id="com" name="com" ></textarea>
+                <br>
+                <button onclick="bob()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function bob() {
+
+            var nam = document.getElementById("name").value;
+            var mail = document.getElementById("mail").value;
+            var comms = document.getElementById("com").value;
+
+            if (mail === ""||comms === ""||nam === ""){
+                alert("Please fill in everything!");
+            } else{
+                alert("Thank you for contacting our team.");
+            }
+        
+    }
+    </script>
+
+
+</body>
+</html>
